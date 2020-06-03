@@ -1,0 +1,41 @@
+name: Admin Custom Logo
+slug: admin-custom-logo
+type: plugin
+version: 1.0.0
+description: Set custom logo for Grav Admin.
+icon: plug
+author:
+  name: Bon Appetit Creative Studio
+  email: hello@bonappetit.studio
+homepage: https://bonappetit.studio
+keywords: grav, plugin, etc
+bugs: https://github.com/manuchan/grav-plugin-admin-custom-logo
+docs: https://github.com/manuchan/grav-plugin-admin-custom-logo
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    custom_logo:
+      label: Custom Logo
+      name: custom_logo
+      type: file
+      destination: 'user/plugins/admin-custom-logo/assets/images'
+      multiple: false
+      autofocus: false
+      avoid_overwriting: false
+      accept:
+        - image/*
