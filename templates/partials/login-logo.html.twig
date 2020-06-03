@@ -6,7 +6,7 @@
     <h1 class="{{ custom_login_logo ? 'custom-logo' : 'default-logo' }}" style="padding: 3rem;">
         {{ title }}
         {% if custom_login_logo %}
-            <img src="{{ url(custom_login_logo) }}" style="max-width: 80%;" title="Login" />
+            <img src="{{ url(custom_login_logo) }}" style="width: 100%;" title="Login" />
         {% else %}
             {% include('@admin-images/logo.svg') %}
         {% endif %}
